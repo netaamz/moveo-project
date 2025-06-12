@@ -119,17 +119,17 @@ export default function Live() {
       <div className={`text-3xl leading-loose font-mono ${isRTL ? 'text-right' : 'text-left'}`} dir={isRTL ? 'rtl' : 'ltr'}>
         {content.map((line, lineIndex) => (
           <div key={lineIndex} className="mb-6">
-            {/* For RTL, we need to maintain chord-lyric alignment as units */}
-            <div className={`flex ${isRTL ? 'flex-row-reverse justify-start' : 'flex-row justify-start'} flex-wrap gap-x-4 gap-y-2`}>
+            {/* Let dir="rtl" handle the word order, flexbox just handles wrapping and alignment */}
+            <div className="flex flex-wrap justify-start gap-x-4 gap-y-2">
               {line.map((word, wordIndex) => (
-                <div key={wordIndex} className="flex flex-col items-center min-w-0">
+                <div key={wordIndex} className="inline-flex flex-col items-center min-w-0">
                   {/* Chord above (only for non-vocalists) */}
                   {!isVocalist && (
                     <div className="text-green-400 text-center min-h-[1.5em] whitespace-nowrap">
                       {word.chords || '\u00A0'}
                     </div>
                   )}
-                  
+                 
                   {/* Lyric below */}
                   <div className="text-white text-center whitespace-nowrap">
                     {word.lyrics}
