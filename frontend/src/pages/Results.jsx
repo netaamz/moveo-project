@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSocket } from '../contexts/SocketContext';
 import { useAuth } from '../contexts/AuthContext';
-import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/card';
+import { Card, CardHeader, CardContent, CardTitle } from '../components/card';
 import axios from 'axios';
 
 export default function Results() {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { Card, CardHeader, CardContent, CardFooter, CardTitle } from '../components/ui/card';
+import { Card, CardHeader, CardContent, CardFooter, CardTitle } from '../components/card';
 import FloatingEmojis from '../components/FloatingEmojis';
 import AuthFields from '../components/AuthFields';
 

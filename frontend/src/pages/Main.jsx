@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useSocket } from '../contexts/SocketContext';
-import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/card';
+import { Card, CardHeader, CardContent, CardTitle } from '../components/card';
 
 export default function Main() {
   const { user, logout } = useAuth();
